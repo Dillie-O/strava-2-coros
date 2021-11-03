@@ -33,11 +33,11 @@ namespace strava_2_coros
 
                 Console.WriteLine("Printing complete list of latitude - longitude with details");
 
-                // List<StravaGPXReaderLib.Models.GPXCoordinates> coordinates = gPXReader.GetGPXCoordinates();
-                // for (int i = 0; i < coordinates.Count; i++)
-                // {
-                //     Console.WriteLine($"lat: {coordinates[i].Latitude} - lon: {coordinates[i].Longitude}");
-                // }
+                List<StravaGPXReaderLib.Models.GPXCoordinates> coordinates = gPXReader.GetGPXCoordinates();
+                for (int i = 0; i < coordinates.Count; i++)
+                {
+                    Console.WriteLine($"Time: {coordinates[i].Timestamp.ToString()} // lat: {coordinates[i].Latitude} - lon: {coordinates[i].Longitude} \\\\ Elevation: {coordinates[i].Elevation}");
+                }
 
                 // StravaGPXReaderLib.Models.GPXAltimetry altimetry = gPXReader.GetGPXAltimetry();
                 // foreach (StravaGPXReaderLib.Models.Altimetry altimetryItem in altimetry.Altimetries)
